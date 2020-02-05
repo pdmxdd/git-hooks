@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $(flake8) ]];
+then
+	echo "-----------------------"
+	echo "MUST LINT BEFORE COMMIT"
+	echo "-----------------------"
+	echo $(flake8)
+	exit 1
+fi
+
